@@ -1,6 +1,6 @@
 // COLLAPSE(Mobile - BurgerNav)
 const burger = document.querySelector('.burger');
-const collapseNav = document.querySelector('.nav__list')
+const collapseNav = document.querySelector('.nav__list');
 
 burger.addEventListener('click', ()=>{
     burger.classList.toggle('active');
@@ -38,12 +38,16 @@ const playBtn = document.querySelector('.vid-btn');
 playBtn.addEventListener('click', ()=>{
     if(vid.paused){
         vid.play();
-        playBtn.innerHTML = '&#x23F8'
+        playBtn.innerHTML = '<i class="fa fa-pause fa-xs"></i>'
     }
     else{
         vid.pause();
-        playBtn.innerHTML = '&#x23F5'
-    }  
+        playBtn.innerHTML = '<i class="fa fa-play fa-xs"></i>'
+    } 
+    // else{
+    //     vid.pause();
+    //     playBtn.innerHTML = '&#x23F5'
+    // }  
 
 })
 

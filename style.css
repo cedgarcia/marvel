@@ -105,21 +105,22 @@ nav.flex{
   transform: rotate(-180deg);
 }
 .line{
+  display: block;
   background-color: rgb(255, 255, 255);
   width: 90%;
   height: 2px;
   margin-bottom: 4px;
 }
-.burger.active div:nth-child(1){
+.burger.active span:nth-child(1){
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.burger.active div:nth-child(2){
+.burger.active span:nth-child(2){
   opacity: 0;
 }
-.burger.active div:nth-child(3){
+.burger.active span:nth-child(3){
   position: absolute;
   top: 50%;
   left: 50%;
@@ -215,12 +216,12 @@ nav.flex{
   .vid-btn{
     outline: none;
     background-color: transparent;
-    border: green;
+    border: none;
     color:white;
     position: relative;
-    bottom:5rem;
+    bottom:4rem;
     left: 2rem;
-    font-size: 2rem;
+    font-size: 1rem;
   }
  
 
