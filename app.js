@@ -1,53 +1,28 @@
-// COLLAPSE
+// COLLAPSE(Mobile - BurgerNav)
 const burger = document.querySelector('.burger');
 const collapseNav = document.querySelector('.nav__list')
-
 
 burger.addEventListener('click', ()=>{
     burger.classList.toggle('active');
     collapseNav.classList.toggle('visible');
 
-}
+})
 
-
-)
-
-
-
-
-// window.addEventListener('scroll', fixLogo)
-
-// function fixLogo() {
-//     if(window.scrollY > logo.offsetHeight + 0) {
-//         logo.classList.add('active')
-//     } else {
-//         logo.classList.remove('active')
-//     }
-// } 
-
-// window.addEventListener('scroll', fixNav)
-
-// function fixNav() {
-//     if(window.scrollY > nav.offsetHeight + 0) {
-//         nav.classList.add('active')
-//     } else {
-//         nav.classList.remove('active')
-//     }
-// }
-
-
-// ON SCROLL
+// ON SCROLL(Nav Animation)
 const logo = document.querySelector('.logo')
 const nav = document.querySelector('.main-nav')
+
 window.addEventListener('scroll', ()=>{
-    if(window.scrollY > nav.offsetHeight + 0){
+    const top = window.scrollY
+    
+    if(top >= nav.offsetHeight + 0){
         nav.classList.add('active')
     }
     else{
         nav.classList.remove('active')
     
     }
-    if(window.scrollY > logo.offsetHeight + 0){
+    if(top > logo.offsetHeight + 0){
         logo.classList.add('active')
     }
     else{
@@ -55,3 +30,21 @@ window.addEventListener('scroll', ()=>{
     
     }
 })
+
+// HERO(Desktop - Play/Pause)
+const vid = document.querySelector('#hero-vid');
+const playBtn = document.querySelector('.vid-btn');
+
+playBtn.addEventListener('click', ()=>{
+    if(vid.paused){
+        vid.play();
+        playBtn.innerHTML = '&#x23F8'
+    }
+    else{
+        vid.pause();
+        playBtn.innerHTML = '&#x23F5'
+    }  
+
+})
+
+

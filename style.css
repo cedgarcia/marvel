@@ -11,7 +11,6 @@ html{
   font-size: 100%;
   line-height: 1.6;
   width: 100%;
-  background-color: rgb(45, 125, 145);
 }
 a{
   text-decoration: none;
@@ -20,7 +19,7 @@ a{
 li{
   list-style: none;
 }
-img{
+img, video{
   width: 100%;
 }
 .flex{
@@ -29,26 +28,29 @@ img{
   align-items: center;
   height: 100%;
 }
+header{
+  background-color: rgb(0, 0, 0);
+}
+/* NAVIGATION */
 nav{
   position: fixed;
   top: 0;
   left: 0;
   z-index:5000;
-  height: 30vh;
-  padding: 2rem;
+  height: 24vh;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  transition: 1s;
+  transition: .4s;
   background:linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,0) );
 }
 .main-nav.active{
   background:#000;
-  padding: 1rem;
+  padding: .5rem;
   align-items: center;
   height: 12vh;
-
 }
 nav.flex{
   justify-content: space-between;
@@ -56,22 +58,23 @@ nav.flex{
 .logo {
   background: url(./img/logo.png) no-repeat center;
   background-size: 100%;
-  height:15rem;
-  width:20rem;
+  height:7rem;
+  width:14rem;
   z-index: 1000;
-  transition: 1s;
+  transition: .4s;
 }
 .logo.active{
   background: url(./img/logo-scrolled.svg) no-repeat center;
-  background-size: 100%;
-  height: 4rem;
-  width: 9rem;
+  background-size: 70%;
+  height:70px;
+  width: 100px;
 }
 
 .nav__list{
   font-family: marvel;
   text-transform: uppercase;
   display: flex;
+  
 }
 .nav__list a{
   margin: 0 1rem;
@@ -88,7 +91,7 @@ nav.flex{
 }
 .burger{
   position: fixed;
-  top: 1.5rem;
+  top: 1rem;
   right: 5%;
   height: 25px;
   width: 25px;
@@ -96,10 +99,10 @@ nav.flex{
   outline: transparent;
   border: transparent; 
   z-index: 2000;  
-  transition: .5s;
+  transition: .2s;
 }
 .burger.active{
-  transform: rotate(-360deg);
+  transform: rotate(-180deg);
 }
 .line{
   background-color: rgb(255, 255, 255);
@@ -112,7 +115,6 @@ nav.flex{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-
 }
 .burger.active div:nth-child(2){
   opacity: 0;
@@ -123,8 +125,18 @@ nav.flex{
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
+/* HERO */
+.hero{
+  margin:auto;
+  padding:3rem 0;
+  width: 80%;
+  height: 100%;
+}
+
+
 /* Mobile */
 @media all and (max-width:768px){
+  /* NAVIGATION */
   nav{
     padding: .5rem;
   }
@@ -137,10 +149,10 @@ nav.flex{
     width:5rem;
   }
   .main-nav{
-    height: 12vh;
+    height: 10vh;
   }
   .main-nav.active{
-    height: 10vh;
+    height: 8vh;
   }
   .nav__list{
     display: flex;
@@ -152,25 +164,63 @@ nav.flex{
     background-color:#000;
     width: 100vw;
     height: 100vh;
-    transform: translateY(-100%);
     transition: .7s;
+    opacity: 0;
   }
   .nav__list.visible{
-    transform: translateY(0%); 
+    opacity: 1;
   }
   .nav__list a{
-    margin: .5rem;
-    opacity: 0;
-    transition:3s;
+    position: relative;
+    top:0;
+    left: 0;
+    margin: .5rem auto;
+    transform: translateY(-100%);
+    transition:.5s;
+    width: 30%;
   }
   .nav__list.visible a{
-    opacity: 1;
+    transform: translateY(0%); 
+  }
+  .logo.active{
+    background-size: 100%;
+  }
+  /* HERO */
+  .hero-desktop{
+    display: none;
+  }
+  .vid-btn{
+    display: none;
   }
 }
 /* Desktop */
 @media all and (min-width:769px){
+  /* NAVIGATION */
+  header{
+    height: 100vh;
+  }
   .burger{
     display: none;
+  }
+  .logo{
+    min-width: 200px;
+  }
+  .nav__list{
+    padding: 0 2rem;
+  }
+  /* HERO */
+  .hero-mobile{
+    display: none;
+  }
+  .vid-btn{
+    outline: none;
+    background-color: transparent;
+    border: green;
+    color:white;
+    position: relative;
+    bottom:5rem;
+    left: 2rem;
+    font-size: 2rem;
   }
  
 
