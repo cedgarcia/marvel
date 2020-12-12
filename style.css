@@ -2,6 +2,12 @@
   font-family: marvel;
   src: url(./font/MarvelRegular-Dj83.ttf);
 }
+:root{
+  --red:#ED1D24;
+  --black2:#202020;
+  --black:#000000;
+  --white:#ffffff;
+}
 *{
   margin: 0;
   padding: 0;
@@ -11,6 +17,7 @@ html{
   font-size: 100%;
   line-height: 1.6;
   width: 100%;
+  background-color: blue;
 }
 a{
   text-decoration: none;
@@ -25,6 +32,9 @@ img, video{
 img{
   vertical-align: middle;
 }
+button{
+  cursor: pointer;
+}
 .flex{
   display: flex;
   justify-content:center;
@@ -32,7 +42,7 @@ img{
   height: 100%;
 }
 header{
-  background-color: rgb(0, 0, 0);
+  background-color:var(--black);
 }
 /* NAVIGATION */
 nav{
@@ -50,10 +60,12 @@ nav{
   background:linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,0) );
 }
 .main-nav.active{
-  background:#000;
+  background:var(--black2);
+  opacity: .95;
   padding: .5rem;
   align-items: center;
   height: 12vh;
+  z-index: 5000;
 }
 nav.flex{
   justify-content: space-between;
@@ -65,14 +77,15 @@ nav.flex{
   width:14rem;
   z-index: 1000;
   transition: .4s;
+  cursor: pointer;
 }
 .logo.active{
   background: url(./img/logo-scrolled.svg) no-repeat center;
   background-size: 70%;
   height:70px;
   width: 100px;
+  cursor: pointer;
 }
-
 .nav__list{
   font-family: marvel;
   text-transform: uppercase;
@@ -83,12 +96,12 @@ nav.flex{
   line-height: 1;
   padding: .2rem;
   font-size: 2rem;
-  color: #fff;
+  color: var(--white);
   letter-spacing: 2px;
   text-align: center;
 }
 .nav__list a:hover{
-  background-color: red;
+  background-color:var(--red);
   transition: .3s ease-out;
 }
 .burger{
@@ -108,7 +121,7 @@ nav.flex{
 }
 .line{
   display: block;
-  background-color: rgb(255, 255, 255);
+  background-color:var(--white);
   width: 90%;
   height: 2px;
   margin-bottom: 4px;
@@ -139,24 +152,103 @@ nav.flex{
 section.news{
   padding:1rem;
   display: flex;
-  flex-wrap: wrap;
-  
+  flex-wrap: wrap; 
 }
 section.news span{
   position: absolute;
   font-family: marvel;
   font-size: 1.3rem;
   text-transform: uppercase;
-  background-color: red;
-  color: white;
+  background-color: var(--red);
+  color: var(--white);
   padding: .1rem .4rem;
   letter-spacing: 1px;
 }
 section.news figure{
   cursor: pointer;
+  opacity: .95;
+}
+section.news figure:hover{
+  opacity: 1;
 }
 section.news figcaption{
   font-family: Arial, Helvetica, sans-serif;
+}
+/* GALLERY */
+/* GALLERY SLICK-SLIDER */
+.slideInLeft {
+  animation-name: animateInLeft;
+  z-index: 2;
+}
+
+.slideInRight {
+  animation-name: animateInRight;
+  z-index: 2;
+}
+
+.slideOutLeft {
+  transform: translateX(-100%);
+}
+
+.slideOutRight {
+  transform: translateX(100%);
+}
+
+@keyframes animateInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes animateInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* GALLERY CONTROLS */
+.gallery-controls{
+  background-color:#202020;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.gallery-controls button{
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color:var(--white);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+#pause{
+  opacity: .8;
+}
+#prev-btn, #next-btn{
+  padding: 0 .4rem;
+  font-size: 2rem;
+  opacity: .8;
+}
+#prev-btn:hover, #next-btn:hover, #pause:hover{  
+  opacity: 1;
+}
+.page{
+  font-size:1.7rem;
 }
 
 
@@ -164,6 +256,7 @@ section.news figcaption{
 /* Mobile */
 @media all and (max-width:768px){
   /* NAVIGATION */
+ 
   nav{
     padding: .5rem;
   }
@@ -233,6 +326,7 @@ section.news figcaption{
     transform: translateY(-4rem);
     font-size: 1.3rem;
     padding: 0rem .5rem;
+    width: 100%;
   }
 }
 /* Desktop */
@@ -263,36 +357,37 @@ section.news figcaption{
     bottom:4rem;
     left: 2rem;
     font-size: 1rem;
+    cursor: pointer;
   }
-  
   section.news figure{
     width: 25%;
     padding: 1rem .4rem;
-    min-width: 200px;
   }
   section.news figcaption{
     color: rgba(0, 0, 0, 0.8);
     font-weight: bold;
   }
-  /* Fixing this */
-  /* section.gallery{
-    background-color: rgba(0, 0, 0, 0.522);
-    height: 90vh;
-    width: 100%;
+  /* GALLERY */
+ section.gallery {
+    position:relative;
+    height: 40vw;
+    overflow: hidden;
+}
+ .slide {
     position: absolute;
-    display: flex;
-  }
-  .gallery-container{
-    position: relative;
-    margin:0 auto;
-    width: 90%;
-  }
-  .gallery-slider{
-    
-  } */
- 
- 
-  
+    width:100%;
+    z-index:1;
+    height: 50vw;
+}
+ .slide img{
+    object-fit: cover;
+    width: 100%;
+ }
+ .slide.active{
+   z-index: 2;
+ }
+
+
  
 }
 /* Smallest Device */

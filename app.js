@@ -30,7 +30,6 @@ window.addEventListener('scroll', ()=>{
     
     }
 })
-
 // HERO(Desktop - Play/Pause)
 const vid = document.querySelector('#hero-vid');
 const playBtn = document.querySelector('.vid-btn');
@@ -48,7 +47,70 @@ playBtn.addEventListener('click', ()=>{
     //     vid.pause();
     //     playBtn.innerHTML = '&#x23F5'
     // }  
-
 })
+
+
+
+
+// GALLERY SLIDER
+const SLIDETIME = 400;//ms
+const pageNumber = document.querySelector('#page')
+const prevBtn = document.querySelector('#prev-btn');//Button var
+const nextBtn = document.querySelector('#next-btn');//Button var
+const slides = [...document.querySelectorAll('.slide')];//Slider var
+
+let clickable = true;
+let active = null;
+let newActive = null;
+
+nextBtn.addEventListener('click', () =>{
+    changeSlide(true);
+})
+prevBtn.addEventListener('click', () =>{
+    changeSlide(false);
+})
+function initSlider() {
+    slides.forEach(slide =>
+      slide.setAttribute('style', `transition: transform ${SLIDETIME}ms;
+                                    animation-duration: ${SLIDETIME}ms`,),
+         );}
+     initSlider();
+
+
+function changeSlide(forward){
+    if(clickable){
+        clickable = false;
+        active = document.querySelector('.slide.active');
+        const activeSlideIndex = slides.indexOf(active)
+        var activePage = pageNumber.innerHTML;
+        if(forward) {   
+            newActive = slides[(activeSlideIndex + 1) % slides.length];
+            active.classList.add('slideOutLeft');
+            newActive.classList.add('slideInRight', 'active');  
+           activePage++
+            pageNumber.innerHTML = activePage;
+
+            }
+        else{
+            newActive = slides[(activeSlideIndex - 1 + slides.length) % slides.length];
+            active.classList.add('slideOutRight');
+            newActive.classList.add('slideInLeft', 'active');
+            activePage--
+            pageNumber.innerHTML = activePage;
+        }     
+
+    }  
+    slides.forEach(slide => {    
+        slide.addEventListener('transitionend', e =>{
+    
+            if (slide === active && !clickable) {
+                clickable = true;
+                active.className = 'slide';
+            }
+        });
+    });  
+}
+
+
 
 
