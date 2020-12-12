@@ -53,7 +53,7 @@ playBtn.addEventListener('click', ()=>{
 
 
 // GALLERY SLIDER
-const SLIDETIME = 400;//ms
+const SLIDETIME = 350;//ms
 const pageNumber = document.querySelector('#page')
 const prevBtn = document.querySelector('#prev-btn');//Button var
 const nextBtn = document.querySelector('#next-btn');//Button var
@@ -69,6 +69,7 @@ nextBtn.addEventListener('click', () =>{
 prevBtn.addEventListener('click', () =>{
     changeSlide(false);
 })
+
 function initSlider() {
     slides.forEach(slide =>
       slide.setAttribute('style', `transition: transform ${SLIDETIME}ms;
@@ -81,24 +82,46 @@ function changeSlide(forward){
     if(clickable){
         clickable = false;
         active = document.querySelector('.slide.active');
-        const activeSlideIndex = slides.indexOf(active)
+        const activeSlideIndex = slides.indexOf(active);
         var activePage = pageNumber.innerHTML;
+
+        
         if(forward) {   
+            // console.log('activeSlideIndex: ', activeSlideIndex);
+            // console.log('allSlides.length: ', slides.length);
+            // console.log('new slide: ', (activeSlideIndex + 1) % slides.length);
+            console.log(slides.length-4)
+
+
             newActive = slides[(activeSlideIndex + 1) % slides.length];
             active.classList.add('slideOutLeft');
-            newActive.classList.add('slideInRight', 'active');  
-           activePage++
-            pageNumber.innerHTML = activePage;
+            newActive.classList.add('slideInRight', 'active');
+            
+
+            // PAGE NUMBER
+            if(slide = activePage<=slides.length){
+                activePage++
+                pageNumber.innerHTML = activePage;
+                if(activePage == (slides.length+1)){
+                
+                    pageNumber.innerHTML = 1
+                }
+            }
 
             }
         else{
             newActive = slides[(activeSlideIndex - 1 + slides.length) % slides.length];
             active.classList.add('slideOutRight');
             newActive.classList.add('slideInLeft', 'active');
-            activePage--
-            pageNumber.innerHTML = activePage;
-        }     
+            //PAGE NUMBER
+            if(forward = activePage>1){
+                activePage--
+                pageNumber.innerHTML = activePage; 
+            }
+            else
+            pageNumber.innerHTML = 5;
 
+        }     
     }  
     slides.forEach(slide => {    
         slide.addEventListener('transitionend', e =>{
@@ -106,7 +129,7 @@ function changeSlide(forward){
             if (slide === active && !clickable) {
                 clickable = true;
                 active.className = 'slide';
-            }
+            }   
         });
     });  
 }
