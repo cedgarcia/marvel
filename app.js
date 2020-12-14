@@ -7,27 +7,23 @@ burger.addEventListener('click', ()=>{
     collapseNav.classList.toggle('visible');
 
 })
-
 // ON SCROLL(Nav Animation)
 const logo = document.querySelector('.logo')
 const nav = document.querySelector('.main-nav')
 
 window.addEventListener('scroll', ()=>{
-    const top = window.scrollY
-    
+    const top = window.scrollY 
     if(top >= nav.offsetHeight + 0){
         nav.classList.add('active')
     }
     else{
-        nav.classList.remove('active')
-    
+        nav.classList.remove('active')   
     }
     if(top > logo.offsetHeight + 0){
         logo.classList.add('active')
     }
     else{
-        logo.classList.remove('active')
-    
+        logo.classList.remove('active') 
     }
 })
 // HERO(Desktop - Play/Pause)
@@ -49,9 +45,6 @@ playBtn.addEventListener('click', ()=>{
     // }  
 })
 
-
-
-
 // GALLERY SLIDER
 const SLIDETIME = 350;//ms
 const pageNumber = document.querySelector('#page')
@@ -69,7 +62,6 @@ nextBtn.addEventListener('click', () =>{
 prevBtn.addEventListener('click', () =>{
     changeSlide(false);
 })
-
 function initSlider() {
     slides.forEach(slide =>
       slide.setAttribute('style', `transition: transform ${SLIDETIME}ms;
@@ -77,15 +69,12 @@ function initSlider() {
          );}
      initSlider();
 
-
 function changeSlide(forward){
     if(clickable){
         clickable = false;
         active = document.querySelector('.slide.active');
         const activeSlideIndex = slides.indexOf(active);
         var activePage = pageNumber.innerHTML;
-
-        
         if(forward) {   
             // console.log('activeSlideIndex: ', activeSlideIndex);
             // console.log('allSlides.length: ', slides.length);
@@ -96,8 +85,8 @@ function changeSlide(forward){
             newActive = slides[(activeSlideIndex + 1) % slides.length];
             active.classList.add('slideOutLeft');
             newActive.classList.add('slideInRight', 'active');
-            
 
+            
             // PAGE NUMBER
             if(slide = activePage<=slides.length){
                 activePage++
@@ -120,12 +109,11 @@ function changeSlide(forward){
             }
             else
             pageNumber.innerHTML = 5;
-
         }     
     }  
+    // SLIDE LOOP
     slides.forEach(slide => {    
         slide.addEventListener('transitionend', e =>{
-    
             if (slide === active && !clickable) {
                 clickable = true;
                 active.className = 'slide';
@@ -133,7 +121,30 @@ function changeSlide(forward){
         });
     });  
 }
+// VIDEO-PLAYER
+// const video= document.querySelector('.vid-playlist');
+// // const video = [...document.querySelectorAll('.playlist')]
+// // const collapseNav = document.querySelector('.nav__list');
+
+// video.addEventListener('click', ()=>{
+//     video.classList.toggle('active');
+//     // collapseNav.classList.toggle('visible');
+
+// })
+function videoPlayer(ev,video){
+    var i, playerLink, playerVid;
+
+    playerVid = document.getElementsByClassName('featured-video')
+    for(i = 0; i<playerVid.length;i++){
+        playerVid[i].style.display='none';
+    }
+    playerLink = document.getElementsByClassName('playlist')
+    for(i=0; i<playerLink.length; i++){
+        playerLink[i].className=playerLink[i].className.replace('active');
+    }
+    document.getElementById(video).style.display='block';
+    ev.currentTarget.className+='active'
 
 
-
-
+}
+document.getElementById('activeBtn').click();
