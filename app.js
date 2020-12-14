@@ -136,15 +136,13 @@ function videoPlayer(ev,video){
 
     playerVid = document.getElementsByClassName('featured-video')
     for(i = 0; i<playerVid.length;i++){
-        playerVid[i].style.display='none';
+        playerVid[i].style.visibility="hidden";
     }
     playerLink = document.getElementsByClassName('playlist')
     for(i=0; i<playerLink.length; i++){
         playerLink[i].className=playerLink[i].className.replace('active');
     }
-    document.getElementById(video).style.display='block';
-    ev.currentTarget.className+='active'
-
-
+    document.getElementById(video).style.visibility="visible";
+    // ev.currentTarget.className+='active'
 }
-document.getElementById('activeBtn').click();
+
