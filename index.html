@@ -31,7 +31,7 @@
       <img src="img/hero-mobile.png" alt="Hero image">
     </div>
     <div class="hero hero-desktop">
-      <video id="hero-vid" src="img/The-Avengers-Background-Video.mp4" autoplay loop></video>
+      <video id="hero-vid" src="img/hero-desktop.mp4" autoplay loop></video>
     </div>
     <button class="vid-btn">
       <i class="fa fa-pause fa-xs"></i>
@@ -65,23 +65,48 @@
   <!-- GALLERY -->
   <section class="gallery">
     <div class="slide active" id="i1">
-      <img src="/img/hero-mobile.png" alt="">
-      <span class="page">1/5</span>
+      <img src="img/gallery/1.jpg" alt="gallery1">
+      <div>
+        <h1>Questions The MCU Can Answer <br> About Maguire & Garfield</h1>
+        <p>With the Maguire and Garfield <br> iterations of Peter Parker <br> looking set for the MCU's Spider-Man 3</p>
+        <a href="https://screenrant.com/spiderman-3-mcu-maguire-garfield-spidermen-questions-answer/" target="_blank">FIND OUT MORE</a>
+      </div>
     </div>
     <div class="slide" id="i2">
-      <img src="/img/download.jpg" alt="">
+      <img src="img/gallery/gallery2.jpg" alt="gallery2">
+      <div>
+        <h1>Marvel's What If  <br> Alternate MCU Stories</h1>
+        <p>The upcoming animated series on Disney+ <br> exploring alternate versions <br> of the MCU storylines.</p>
+        <a href="https://screenrant.com/marvel-what-if-show-trailer-peggy-carter-tchalla/" target="_blank">FIND OUT MORE</a>
+      </div>
     </div>
     <div class="slide" id="i3">
-      <img src="/img/hero-mobile.png" alt="">
+      <img src="img/gallery/3.jpeg" alt="gallery3">
+      <div>
+        <h1>The Eternals: <br> First poster for MCU film</h1>
+        <p>The Eternals stars Angelina Jolie, Richard Madden, <br> Salma Hayek and Kumail Nanjiani as members of <br>
+           an elite squad of aliens tasked  <br> with protecting humanity.</p>
+        <a href="https://www.independent.co.uk/arts-entertainment/films/news/eternals-marvel-poster-teaser-mcu-release-date-ma-dong-seok-angelina-jolie-a9635261.html" target="_blank">FIND OUT MORE</a>
+      </div>
     </div> 
     <div class="slide" id="i4">
-      <img src="/img/download.jpg" alt="">
+      <img src="img/gallery/4.jpg" alt="gallery4">
+      <div>
+        <h1>Captain Marvel 2's Villain <br> Sets Up Galactus For Phase 5</h1>
+        <p>Heralds of Galactus as its villains,  <br> setting up their master as the overarching <br> Big Bad of the MCU's Phase 5.</p>
+        <a href="https://screenrant.com/captain-marvel-2-heralds-galactus-mcu-phase-5-setup/" target="-blank">FIND OUT MORE</a>
+      </div>
     </div>
     <div class="slide" id="i5">
-      <img src="/img/download.jpg" alt="">
+      <img src="img/gallery/gallery5.jpg" alt="gallery5">
+      <div>
+        <h1>Doctor Strange & The X-Men <br> Are Already Connected</h1>
+        <p>The Juggernaut has become synonymous with the X-Men,  <br> but who knew the unstoppable villain was just <br> as closely tied to the sorcerer supreme?.</p>
+        <a href="https://screenrant.com/doctor-strange-mcu-xmen-cyttorak/" target="_blank">FIND OUT MORE</a>
+      </div>
     </div>
   </section>
-  <div class="gallery-controls">
+  <section class="gallery-controls">
     <button>
       <i class="fa fa-pause" id="pause"></i>
     </button>
@@ -90,7 +115,7 @@
       <span id="page" class="page">1</span><span class="page"> / 5</span> 
       <i class="fa fa-angle-right" id="next-btn"></i>
     </button>
-  </div>
+  </section>
   <section id="video-player">
     <div class="vid-container">
       <!-- <iframe style="z-index:2 ;" class="featured-video" id="video1"  src="https://www.youtube.com/embed/G4JuopziR3Q" allowfullscreen></iframe> -->
@@ -103,6 +128,14 @@
       <h1>FEATURED VIDEOS</h1>
       <div class="vid-playlist">
 
+        <figure class="playlist">
+          <img src="https://img.youtube.com/vi/hDaUcasdz3k/mqdefault.jpg" alt="Phase4">
+          <span>Beyond Phase 4</span>
+        </figure>
+        <figure class="playlist">
+          <img src="https://img.youtube.com/vi/SfEJruPT5Zw/3.jpg" alt="Black Phanter 2">
+          <span>Black Panter 2</span>
+        </figure>
         <figure class="playlist" onclick="videoPlayer(event, 'video1')"> 
           <img src="https://img.youtube.com/vi/G4JuopziR3Q/mqdefault.jpg" alt="Loki">
           <span>Loki</span>
@@ -111,63 +144,54 @@
           <img src="https://img.youtube.com/vi/sj9J2ecsSpo/mqdefault.jpg" alt="WandaVision">
           <span>WandaVision</span>
         </figure>
-        
         <figure class="playlist" onclick="videoPlayer(event, 'video3')">
-          <img src="https://img.youtube.com/vi/G4JuopziR3Q/mqdefault.jpg" alt="Loki">
-          <span>asfa as</span>
+          <img src="https://img.youtube.com/vi/MVFZ6KoJGUE/mqdefault.jpg" alt="Falcon">
+          <span>The Falcon and the Winter Soldier</span>
         </figure>
-        <figure class="playlist" onclick="videoPlayer(event, 'video1')">
-          <img src="https://img.youtube.com/vi/G4JuopziR3Q/mqdefault.jpg" alt="Loki">
-          <span>asfa as</span>
-        </figure>
-        <figure class="playlist">
-          <img src="https://img.youtube.com/vi/G4JuopziR3Q/mqdefault.jpg" alt="Loki">
-          <span>asfa as</span>
-        </figure>
-        <figure class="playlist">
-          <img src="https://img.youtube.com/vi/G4JuopziR3Q/mqdefault.jpg" alt="Loki">
-          <span>asfa as</span>
-        </figure>
-        <figure class="playlist">
-          <img src="https://img.youtube.com/vi/G4JuopziR3Q/mqdefault.jpg" alt="Loki">
-          <span>asfa as</span>
+        <figure class="playlist" onclick="videoPlayer(event, 'video4')">
+          <img src="https://img.youtube.com/vi/jSnc8Mt_EEI/1.jpg" alt="Sang-Chi">
+          <span>Sang-Chi</span>
         </figure>
       </div>
     </div>
   </section>
+
   <section class="explore">
-    <h1 style="text-align: center;">EXPLORE </h1>
+    <h1>EXPLORE </h1>
     <div class="thumbnail-slider">
-      <div class="thumbnail-container">
-
-        <div class="item">
-          1
-        </div>
-        <div class="item">
-          2
-        </div>
-        <div class="item">
-          3
-        </div>
-        <div class="item">
-          4
-        </div>
-        <div class="item">
-          5
-        </div>
-        <div class="item">
-          <p style="position: absolute;;
-     z-index: 2; color: white;">afads</p>
-          <img style="height:100%;" src="/img/download.jpg" alt="">
-        </div>
-        <div class="item">
-          7
-        </div>
-        <div class="item">
-          8
-        </div>
-
-
+      <div class="thumbnail-container">     
+          <a href="Asgard" class="item">
+            <p>ASGARD</p>
+            <img src="img/places/Norse-Mythology_-Asgard.webp" alt="asgard img">
+          </a>
+          <a href="Asgard" class="item">
+            <p>KNOWHERE</p>
+            <img src="img/places/knowhere.jpg" alt="knowhere img">
+          </a>
+          <a href="Asgard" class="item">
+            <p>WAKANDA</p>
+            <img src="img/places/wakanda.jpg" alt="wakandaimg">
+          </a>
+          <a href="Asgard" class="item">
+            <p>QUANTUM REALM</p>
+            <img src="img/places/quantumrealm.jpg" alt="quantum realm img">
+          </a>
+          <a href="Asgard" class="item">
+            <p>ANTMAN</p>
+            <img src="img/places/antman.jpg" alt="antman img">
+          </a>
+          <a href="Asgard" class="item">
+            <p>PEPPER POTTS</p>
+            <img src="img/places/pepper.jpg" alt="pepper pots img">
+          </a>
+          <a href="Asgard" class="item">
+            <p>HULK</p>
+            <img src="img/places/hulk.jpg" alt="hulk img">
+          </a>
+          <a href="Asgard" class="item">
+            <p>HAWKEYE</p>
+            <img src="img/places/hawkeye.jpg" alt="hawkeye img">
+          </a>
       </div>
       <div class="controls">
         
