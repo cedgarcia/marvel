@@ -39,12 +39,7 @@ playBtn.addEventListener('click', ()=>{
         vid.pause();
         playBtn.innerHTML = '<i class="fa fa-play fa-xs"></i>'
     } 
-    // else{
-    //     vid.pause();
-    //     playBtn.innerHTML = '&#x23F5'
-    // }  
 })
-
 // GALLERY SLIDER
 const SLIDETIME = 350;//ms
 const pageNumber = document.querySelector('#page')
@@ -76,11 +71,7 @@ function changeSlide(forward){
         const activeSlideIndex = slides.indexOf(active);
         var activePage = pageNumber.innerHTML;
         if(forward) {   
-            // console.log('activeSlideIndex: ', activeSlideIndex);
-            // console.log('allSlides.length: ', slides.length);
-            // console.log('new slide: ', (activeSlideIndex + 1) % slides.length);
-            console.log(slides.length-4)
-
+          
 
             newActive = slides[(activeSlideIndex + 1) % slides.length];
             active.classList.add('slideOutLeft');
@@ -121,7 +112,6 @@ function changeSlide(forward){
         });
     });  
 }
-
 function videoPlayer(ev,video){
     var i;
     const playerVid = document.getElementsByClassName('featured-video')
@@ -135,19 +125,13 @@ function videoPlayer(ev,video){
     for(i=0; i<playerLink.length; i++){
         playerLink[i].className=playerLink[i].className.replace('active');
     }
-
-    // ev.currentTarget.className+='.playlist.active'
-
 }
 
 // RESPONSIVE SLIDER
-
 const container = document.querySelector('.thumbnail-container');
 const controls = document.querySelector('.controls');
-
 const allBox = [...document.querySelectorAll('.item')];
 const containerWidth = container.offsetWidth;
-
 const margin = 30;
 var items = 0;
 var totalItems = 0;
@@ -189,33 +173,26 @@ function start(){
             if(i==1){
                 li.className='active'
             }
-
-        }
-    
+        }   
         controls.appendChild(ul);
 }
-function controlSlide(ele){
+function controlSlide(here){
    const ul= controls.children;
    const li =ul[0].children;
    var active;
 
    for(let i=0;i<li.length;i++){
     if(li[i].className=="active"){
-        // find who is now active
         active=i;
-        // remove active class from all 'li' elements
         li[i].className="";
     }
 }
-// add active class to current slide
-ele.className="active";
+here.className="active";
 
-var numb=(ele.id-1)-active;
+var numb=(here.id-1)-active;
    jumpSlideWidth=jumpSlideWidth+(containerWidth*numb);
 container.style.marginLeft=-jumpSlideWidth + "px";
-
 }
-
 window.onload=load();
 
 
