@@ -93,14 +93,16 @@
   </div>
   <section id="video-player">
     <div class="vid-container">
-      <iframe class="featured-video" id="video1"  src="https://www.youtube.com/embed/G4JuopziR3Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
-      <iframe class="featured-video" id="video2" src="https://www.youtube.com/embed/sj9J2ecsSpo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <!-- <iframe style="z-index:2 ;" class="featured-video" id="video1"  src="https://www.youtube.com/embed/G4JuopziR3Q" allowfullscreen></iframe> -->
+      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Gi4CTYOs7J4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <!-- <iframe class="featured-video" id="video2" src="https://www.youtube.com/embed/sj9J2ecsSpo"  allowfullscreen></iframe>
+    -->
     </div>
 
     <div class="vid-playlist-container">
       <h1>FEATURED VIDEOS</h1>
       <div class="vid-playlist">
+
         <figure class="playlist" onclick="videoPlayer(event, 'video1')"> 
           <img src="https://img.youtube.com/vi/G4JuopziR3Q/mqdefault.jpg" alt="Loki">
           <span>Loki</span>
@@ -109,6 +111,7 @@
           <img src="https://img.youtube.com/vi/sj9J2ecsSpo/mqdefault.jpg" alt="WandaVision">
           <span>WandaVision</span>
         </figure>
+        
         <figure class="playlist" onclick="videoPlayer(event, 'video3')">
           <img src="https://img.youtube.com/vi/G4JuopziR3Q/mqdefault.jpg" alt="Loki">
           <span>asfa as</span>
@@ -129,11 +132,46 @@
           <img src="https://img.youtube.com/vi/G4JuopziR3Q/mqdefault.jpg" alt="Loki">
           <span>asfa as</span>
         </figure>
-    
+      </div>
+    </div>
+  </section>
+  <section class="explore">
+    <h1 style="text-align: center;">EXPLORE </h1>
+    <div class="thumbnail-slider">
+      <div class="thumbnail-container">
+
+        <div class="item">
+          1
+        </div>
+        <div class="item">
+          2
+        </div>
+        <div class="item">
+          3
+        </div>
+        <div class="item">
+          4
+        </div>
+        <div class="item">
+          5
+        </div>
+        <div class="item">
+          <p style="position: absolute;;
+     z-index: 2; color: white;">afads</p>
+          <img style="height:100%;" src="/img/download.jpg" alt="">
+        </div>
+        <div class="item">
+          7
+        </div>
+        <div class="item">
+          8
+        </div>
+
 
       </div>
-
-
+      <div class="controls">
+        
+      </div>
     </div>
   </section>
 
@@ -151,5 +189,7 @@
   
  
   <script src="app.js"></script>
+
+ 
 </body>
 </html>
