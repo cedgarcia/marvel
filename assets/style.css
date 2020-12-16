@@ -686,8 +686,7 @@ footer .promotion figure img{
     position: relative;
     top: 0;
     background-color: violet;
-    /* height: 55%; */
-    /* width: 100%; */
+    width: 100%;
   }
   .vid-container iframe{
    position: absolute;
@@ -695,7 +694,6 @@ footer .promotion figure img{
    left: 0;
    width: 100%;
    height: 100%;
-
  }
   .vid-playlist-container{
     position: relative;
@@ -819,7 +817,7 @@ footer .promotion figure img{
    position: relative;
    top: 0;
    background-color: violet;
-   height: 55%;
+   height: 70%;
    width: 100%;
  }
  .vid-container iframe{
@@ -833,7 +831,7 @@ footer .promotion figure img{
  .vid-playlist-container{
    position: relative;
    top: 0;
-   height:52%;
+   height:65%;
    width: 100%;
    min-width: 300px;
  }
