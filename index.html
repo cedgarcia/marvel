@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/logo/favicon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <title>Home Page | Marvel Cinematic Universe</title>
@@ -24,6 +25,7 @@
         <li><a href="">Explore</a></li>
         <li><a href="">Games</a></li>
         <li><a href="">More</a></li>
+        <li><a href=""> <i class="fa fa-envelope-o fa-xs" style="font-size: 1.5rem;"></i></a></li>
       </ul>
     </nav>
     <!-- HERO -->
@@ -104,7 +106,7 @@
         <p>The Juggernaut has become synonymous with the X-Men,  <br> but who knew the unstoppable villain was just <br> as closely tied to the sorcerer supreme?.</p>
         <a href="https://screenrant.com/doctor-strange-mcu-xmen-cyttorak/" target="_blank">FIND OUT MORE</a>
       </div>
-    </div>
+    </div>    
   </section>
   <section class="gallery-controls">
     <button>
@@ -118,39 +120,35 @@
   </section>
   <section id="video-player">
     <div class="vid-container">
-      <!-- <iframe style="z-index:2 ;" class="featured-video" id="video1"  src="https://www.youtube.com/embed/G4JuopziR3Q" allowfullscreen></iframe> -->
-      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Gi4CTYOs7J4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-      <!-- <iframe class="featured-video" id="video2" src="https://www.youtube.com/embed/sj9J2ecsSpo"  allowfullscreen></iframe>
-    -->
+      <!-- <iframe class="featured-video" id="video1" src="https://www.youtube.com/embed/7MIC4P306Cg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="featured-video" id="video2" src="https://www.youtube.com/embed/UlnufxrJlAk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="featured-video" id="video3" src="https://www.youtube.com/embed/sj9J2ecsSpo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="featured-video" id="video4" src="https://www.youtube.com/embed/MVFZ6KoJGUE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="featured-video" id="video5" src="https://www.youtube.com/embed/jLMBLuGJTsA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
     </div>
 
     <div class="vid-playlist-container">
       <h1>FEATURED VIDEOS</h1>
       <div class="vid-playlist">
-
-        <figure class="playlist">
-          <img src="https://img.youtube.com/vi/hDaUcasdz3k/mqdefault.jpg" alt="Phase4">
+        <figure class="playlist" onclick="videoPlayer(event, 'video1')"> 
+          <img src="img/playlist/infisaga.jpg" alt="Phase4">
           <span>Beyond Phase 4</span>
         </figure>
-        <figure class="playlist">
-          <img src="https://img.youtube.com/vi/SfEJruPT5Zw/3.jpg" alt="Black Phanter 2">
-          <span>Black Panter 2</span>
-        </figure>
-        <figure class="playlist" onclick="videoPlayer(event, 'video1')"> 
-          <img src="https://img.youtube.com/vi/G4JuopziR3Q/mqdefault.jpg" alt="Loki">
+        <figure class="playlist" onclick="videoPlayer(event, 'video2')"> 
+          <img src="img/playlist/loki.jpg" alt="Loki">
           <span>Loki</span>
         </figure>
-        <figure class="playlist" onclick="videoPlayer(event, 'video2')">
-          <img src="https://img.youtube.com/vi/sj9J2ecsSpo/mqdefault.jpg" alt="WandaVision">
+        <figure class="playlist" onclick="videoPlayer(event, 'video3')">
+          <img src="img/playlist/wandavision.jpg" alt="WandaVision">
           <span>WandaVision</span>
         </figure>
-        <figure class="playlist" onclick="videoPlayer(event, 'video3')">
-          <img src="https://img.youtube.com/vi/MVFZ6KoJGUE/mqdefault.jpg" alt="Falcon">
+        <figure class="playlist" onclick="videoPlayer(event, 'video4')">
+          <img src="img/playlist/falcon.jpg" alt="Falcon">
           <span>The Falcon and the Winter Soldier</span>
         </figure>
-        <figure class="playlist" onclick="videoPlayer(event, 'video4')">
-          <img src="https://img.youtube.com/vi/jSnc8Mt_EEI/1.jpg" alt="Sang-Chi">
-          <span>Sang-Chi</span>
+        <figure class="playlist" onclick="videoPlayer(event, 'video5')">
+          <img src="/img/playlist/morbius.jpg" alt="morbius">
+          <span>Morbius</span>
         </figure>
       </div>
     </div>
@@ -193,27 +191,64 @@
             <img src="img/places/hawkeye.jpg" alt="hawkeye img">
           </a>
       </div>
-      <div class="controls">
-        
+      <div class="controls"> 
       </div>
     </div>
   </section>
-
-
-      
-
-
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, consectetur. Laudantium saepe quam nostrum harum beatae laboriosam obcaecati iure ab voluptatibus quas voluptates aliquam labore, non natus magni. Dicta ab, eaque cupiditate mollitia est quas, dolore odit obcaecati corrupti fugit neque consectetur unde omnis blanditiis voluptatibus laudantium dolores sint debitis!asfkashfkashf Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae veniam ad cum consequatur labore error exercitationem unde officiis accusantium. Nihil sunt distinctio, eveniet quo reiciendis excepturi officiis rerum quod id culpa necessitatibus quibusdam animi, fugit saepe harum consequuntur. Consequuntur officiis laudantium voluptatem reprehenderit voluptatum, accusantium necessitatibus debitis sunt nihil quia recusandae incidunt quaerat explicabo voluptas tempora vel. Suscipit repudiandae repellendus, quam praesentium dolorum eum doloremque voluptatibus esse exercitationem quaerat architecto beatae porro neque quos quia nihil, consequuntur voluptas distinctio veritatis omnis hic voluptates consequatur? Necessitatibus, voluptatibus nemo cumque porro, tempora tenetur culpa nesciunt officia perspiciatis nam expedita accusantium adipisci doloribus, dolorem quam. Ab dolorum ducimus distinctio qui libero ipsam aliquid, totam nulla nesciunt cum officiis facere quisquam laudantium aut id. Rem laudantium eum itaque rerum dolorum ad earum quos dolor culpa, quas minima fugiat laboriosam modi id nam. Quo nisi facere est error animi suscipit tenetur quidem nemo veniam corrupti? Accusantium odit sunt culpa ex, delectus quis libero doloremque odio totam quisquam nam obcaecati fuga assumenda aperiam harum consequatur quaerat error corporis dicta quae provident blanditiis. Unde veritatis nisi repellendus dolore dolorem provident non excepturi fuga enim doloribus sit, illum cupiditate consequatur, atque odio recusandae alias eligendi pariatur praesentium reprehenderit amet repellat nulla! Tenetur, voluptate! Deleniti omnis reiciendis perspiciatis amet, neque nam doloribus quis, beatae aliquid architecto deserunt tenetur nulla dolor! Dignissimos dolor autem at deleniti labore molestiae numquam nostrum totam, natus tempora. Officia laboriosam dignissimos temporibus, iste eaque eligendi pariatur at iusto hic asperiores. Ipsum, tenetur accusantium quibusdam fugit molestias iusto, ut vero quod facilis minima itaque fugiat doloribus dolorem tempora vitae beatae animi cum id repudiandae sapiente sunt, explicabo harum! Accusamus iusto nulla facere dolorem explicabo vitae quo, sint quae similique provident nostrum atque minima obcaecati beatae sit accusantium repellendus velit, inventore dolore distinctio. Ex rerum, illum delectus perferendis quos sed inventore eligendi aperiam non architecto consequatur, earum maiores deleniti, blanditiis quas? Ullam alias non vero nisi soluta, eos atque dolorem quas deleniti doloribus laborum culpa! Minus qui autem natus at nesciunt nam beatae ratione amet repellat voluptas laudantium repudiandae temporibus ab, facere, quam, deserunt a animi sed unde. Beatae possimus, maiores omnis rem dicta et odio minima. Nemo alias ipsam accusantium dignissimos laboriosam esse hic, id, odio, modi odit illo similique! Blanditiis nisi nostrum tempora voluptatum laboriosam neque cupiditate quisquam rerum assumenda, delectus, inventore hic quae, corrupti voluptatibus error quam tenetur ratione odit! Itaque aliquam recusandae corporis!
-</div>
-
-
-
-
-
-  
- 
+  <section class="sign-up center">
+    <i class="fa fa-envelope-o fa-3x sign-up-envelope"></i>
+    <h1>Sign up for Email</h1>
+    <p>Be the first to know about the latest MCU products and updates.</p>
+    <a href="">SIGN UP <i class="fa fa-angle-double-right" style="font-weight: bolder;"></i> </a>
+  </section>
+  <footer>
+    <div class="logo1"><a href="index.html"></a></div>
+    <div class="footer-nav"> 
+      <ul class="primary-links">
+        <li><a href="">About marvel</a></li>
+        <li><a href="">help/faqs</a></li>
+        <li><a href="">careers</a></li>
+        <li><a href="">internships</a></li>
+       </ul>
+       <ul class="secondary-links">
+        <li><a href="">advertising</a></li>
+        <li><a href="">marvelhq.com</a></li>
+        <li><a href="">redeem digital comics</a></li>
+      </ul>
+    </div>
+    <div class="promotion">
+      <figure>
+        <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvel_insider-topnav-logo-large2x.png" alt="Marvel Fan">
+        <figcaption><p> <b>Marvel insider</b>  <br>Get Rewarded for Being a Marvel Fan  </p></figcaption>
+      </figure>
+      <figure>
+        <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/mastercard-crop_0-footer-v3.png" alt="Marvel Mastercard">
+        <figcaption><p> <b> Marvel Mastercard&#174;</b> <br>6 Card Designs - Unlimited Cashback</p></figcaption>
+      </figure>
+    </div>
+    <div class="social-media-links">
+        <p> FOLLOW MARVEL</p>
+      <ul>
+        <li><a href=""><i class="fa fa-facebook-official fa-lg"></i></a></li>
+        <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li><a href=""><i class="fa fa-instagram fa-lg"></i></a></li>
+        <li><a href=""><i class="fa fa-tumblr fa-lg"></i></a></li>
+        <li><a href=""><i class="fa fa-youtube-play fa-lg"></i></a></li>
+        <li><a href=""> <i class="fa fa-pinterest fa-lg"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+  <footer class="main-footer" style="position: relative; bottom: 0;">
+    <a href="">Terms of Use</a>
+    <a href="">Privacy Policy</a>
+    <a href="">Your California Privacy Rights</a>
+    <a href="">Do Not Sell my Info</a>
+    <a href="">Children's Online Privacy Policy</a>
+    <a href="">License Agreement</a>
+    <a href="">Interest Based Ads</a>
+    <a href="">Marvel Insider Terms</a>
+    <span style="position: absolute; bottom: 0;">&#169; 2020 Marvel Cinematic Universe</span>
+  </footer>
   <script src="app.js"></script>
-
- 
 </body>
 </html>

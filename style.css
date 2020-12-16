@@ -235,7 +235,7 @@ section.gallery {
   object-fit: cover;
   width: 100%;
   opacity: .3;
-  transition: 1s;
+  transition: .5s ease-in;
 }
 .slide img:hover{
   opacity: .7;
@@ -244,9 +244,6 @@ section.gallery {
  z-index: 2;
  opacity: 1;
 }
-
- 
-
 /* GALLERY CONTROLS */
 .gallery-controls{
   background-color:var(--black);
@@ -437,8 +434,137 @@ section.gallery {
 }
 .thumbnail-slider .controls ul li.active{
 	background-color:var(--black2);
-	color:#ffffff;
+  color:#ffffff;
+}
+/* SIGNUP SECTION */
+section.sign-up{
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+}
+section.sign-up h1{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: .5rem;
+  font-size: 2rem;
+}
+section.sign-up p{
+  padding: .5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+section.sign-up a{
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  color: var(--red);
 
+}
+.sign-up-envelope::before{
+  content: "";
+  color: var(--red);
+  border: var(--red) solid 1px;
+  padding: 2rem;
+  border-radius: 50%;
+  animation: glow 1s ease-in 0s infinite ;
+  height: 100%;
+  cursor: pointer;
+}
+@keyframes glow{
+  0%{
+    padding:.2rem;
+    border:solid 3px;
+    box-shadow: 0 0 10px var(--red);
+  }
+  25%{
+    padding: .4rem;
+    border:solid 2.5px;
+    box-shadow: 0 0 20px  var(--red);
+  }
+  50%{
+    padding: .8rem;
+    border:solid 2px;
+    box-shadow: 0 0 20px  var(--red); 
+  }
+  75%{
+    padding: 1.2rem;
+    border: solid 1.5px;
+    box-shadow: 0 0 10px  var(--red);
+  }
+  100%{
+    padding: .2rem;
+    border:  solid 1.3px;
+     box-shadow: 0 0 4px  var(--red);
+  }
+}
+footer{
+  width: 100%;
+  padding: 3rem 1rem 1rem;
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+footer a{
+  color: var(--white);
+}
+footer .logo1{
+  background: url(./img/logo/logo.png) no-repeat center;
+  background-size: 100%;
+  height:7rem;
+  width:7rem;
+  transition: .4s;
+  cursor: pointer;
+}
+.footer-nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.primary-links{
+  font-size: .9rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-shadow: 0 0 1px var(--white);
+}
+.secondary-links{
+  padding: 1rem;
+  line-height: 2;
+  font-size: .8rem;
+}
+footer .promotion figure{
+  display: flex;
+  align-items: center;
+}
+footer .promotion figure img{
+  height: 2rem;
+  width: 4rem;
+  margin: 1.2rem;
+}
+.social-media-links{
+  padding: 1rem;
+}
+.social-media-links p{
+  padding-bottom: 1rem;
+}
+.social-media-links ul{
+  margin: 0 .5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: .4rem;
+}
+.social-media-links li a:hover{
+  transition: .2s;
+  opacity: .6;
+}
+.main-footer{
+  font-size: .8rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+.main-footer a{
+  padding: 0 1rem;
 }
 
 
@@ -536,7 +662,7 @@ section.gallery {
   }
   .slide div{
     padding: 1rem;
-    height: 100;
+    height: 100%;
     position: absolute;
   }
   .slide div h1{
@@ -574,19 +700,47 @@ section.gallery {
   .vid-playlist-container{
     position: relative;
     top: 0;
-
     height:52%;
     width: 100%;
     min-width: 300px;
   }
   .vid-playlist{
-
-
    width: 100%;
    position: relative;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer div{
+    border-bottom: 1px solid;
+    width: 100%;
+     
+  }
+  .main-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    padding: 2rem;
+  }
+  .social-media-links ul{
+    display:flex;
+    width: 100%;
+  }
+  .social-media-links p{
+    text-align: center;
+  }
+  .social-media-links li{
+    padding: 2rem;
 
+    justify-content: space-between;
   }
 
+ 
 }
 /* Desktop */
 @media all and (min-width:769px){
@@ -631,20 +785,17 @@ section.gallery {
     position:relative;
     height: 45vw;
     overflow: hidden;
-
 }
  .slide {
     position: absolute;
     width:100%;
     z-index:1;
     height: 60vw;
-    opacity: 0;
-  
+    opacity: 0; 
 }
  .slide img{
     object-fit: cover;
     width: 100%;
-
  }
  .slide.active{
    z-index: 2;
@@ -663,7 +814,6 @@ section.gallery {
    height: 70vh;
    display: grid;
    grid-template-columns: 75% 25%;
-
  }
  .vid-container{
    position: relative;
@@ -683,13 +833,11 @@ section.gallery {
  .vid-playlist-container{
    position: relative;
    top: 0;
- 
    height:52%;
    width: 100%;
    min-width: 300px;
  }
  .vid-playlist{
-
   height: 90%;
   width: 100%;
   overflow-y: scroll;
@@ -697,11 +845,10 @@ section.gallery {
  }
 }
 /* Smallest Device */
-
 @media all and (max-width:600px){
 .slide div{
   padding: 1rem;
-  height: 100;
+  height: 100%;
   position: absolute;
 }
 .slide div h1{

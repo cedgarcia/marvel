@@ -71,7 +71,6 @@ function changeSlide(forward){
         const activeSlideIndex = slides.indexOf(active);
         var activePage = pageNumber.innerHTML;
         if(forward) {   
-          
 
             newActive = slides[(activeSlideIndex + 1) % slides.length];
             active.classList.add('slideOutLeft');
